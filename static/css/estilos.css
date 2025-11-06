@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+.contenedor_principal {
+    height: auto;
+    width: auto;
+    padding: 5px;
+    background-color: #95e8ab;
+
+}
+
+.contenedor {
+    padding: 5px;
+    border-radius: 25px;
+    background-color: #5c71db;
+}
+
+
+.boton_principal {
+
+}
