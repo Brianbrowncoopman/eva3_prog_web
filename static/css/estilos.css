@@ -4,23 +4,86 @@ body {
     margin: 0;
     padding: 0;
 }
-
-
 .contenedor_principal {
-    height: auto;
-    width: auto;
-    padding: 5px;
-    background-color: #95e8ab;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
-
 .contenedor {
-    padding: 5px;
-    border-radius: 25px;
-    background-color: #5c71db;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
-
-
 .boton_principal {
-
+    display: inline-block;
+    background-color: #228bf7;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: underline;
+    border: none;
+    border-radius: 20px;
+    padding: 30px 50px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
+.boton_principal:hover {
+    background-color: #1873c5;
+}
+
+.card_form {
+    width: 420px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 32px 28px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+}
+
+.card_form h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.card_form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 7px;
+    margin-top: 17px;
+    font-weight: bold;
+}
+
+.card_form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 11px;
+    background: #fafafa;
+}
+
+.boton_form {
+    background: #228bf7;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 18px;
+    transition: background 0.2s;
+}
+
+.boton_form:hover {
+    background: #1760b0;
+}
+
+.resultado {
+    text-align: center;
+    margin-top: 28px;
+    font-size: 1.4rem;
+}
+
