@@ -39,9 +39,37 @@ def ejercicio1():
                            nota3=nota3,
                            asistencia=asistencia)
 
-@app.route('/nombres')
+
+
+@app.route('/nombres', methods=['GET', 'POST'])
 def ejercicio2():
-    return render_template('form_nombres.html')
+    resultado = None
+    nombres_largos = []
+    cantidad = 0
+
+    nombre1 = ""
+    nombre2 = ""
+    nombre3 = ""
+
+    if request.method == 'POST':
+        nombre1 = request.form['nombre1']
+        nombre2 = request.form['nombre2']
+        nombre3 = request.form['nombre3']
+
+        nombres = [nombre1, nombre2, nombre3]
+        max_len = max(len(nombre) for nombre in nombres)
+        # Lista con todos los nombres que tienen la cantidad máxima de letras
+        nombres_largos = [nombre for nombre in nombres if len(nombre) == max_len]
+        cantidad = max_len
+        resultado = True
+
+    return render_template('form_nombres.html',
+                           resultado=resultado,
+                           nombre1=nombre1,
+                           nombre2=nombre2,
+                           nombre3=nombre3,
+                           nombres_largos=nombres_largos,
+                           cantidad=cantidad)
 
 if __name__ == '__main__':
     app.run(debug=True)

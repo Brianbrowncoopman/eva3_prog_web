@@ -87,3 +87,22 @@ body {
     font-size: 1.4rem;
 }
 
+.card_form label {
+    text-align: left;
+    display: block;
+    margin-top: 17px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.card_form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 11px;
+    background: #fafafa;
+}
+
+

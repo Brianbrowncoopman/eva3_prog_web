@@ -1,12 +1,34 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pagina Principal</title>
-        <link rel="stylesheet" href="/static/css/estilos.css"/>
-    </head>
-    <body>
+{% extends "base.html" %}
 
-    </body>
-</html>
+{% block title %}Formulario de Nombres{% endblock %}
+
+{% block contenido %}
+<div class="card_form">
+    <form action="" method="post">
+        <label for="nombre1">Nombre 1:</label>
+        <input type="text" id="nombre1" name="nombre1" required value="{{ nombre1 if nombre1 is defined else '' }}">
+
+        <label for="nombre2">Nombre 2:</label>
+        <input type="text" id="nombre2" name="nombre2" required value="{{ nombre2 if nombre2 is defined else '' }}">
+
+        <label for="nombre3">Nombre 3:</label>
+        <input type="text" id="nombre3" name="nombre3" required value="{{ nombre3 if nombre3 is defined else '' }}">
+
+        <button type="submit" class="boton_form">Enviar</button>
+    </form>
+    {% if resultado %}
+    <div class="resultado">
+        <h2>
+          {% if nombres_largos|length == 1 %}
+            Nombre con más caracteres: {{ nombres_largos[0] }}
+          {% else %}
+            Nombres con más caracteres: {{ nombres_largos | join(', ') }}
+          {% endif %}
+        </h2>
+        <h2>Cantidad de caracteres: {{ cantidad }}</h2>
+    </div>
+{% endif %}
+</div>
+{% endblock %}
+
+
