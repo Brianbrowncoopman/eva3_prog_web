@@ -16,20 +16,9 @@ La aplicación cumple con los requisitos indicados, presenta resultados claros y
 Estructura de carpetas  
 =========================
 
-Eva_3/
-│
-├── main.py
-├── static/
-│   └── css/
-│       └── estilos.css
-├── templates/
-│   ├── base.html
-│   ├── home.html
-│   ├── form_notas.html
-│   └── form_nombres.html
-├── .venv/
-│   └── ... (entorno virtual de Python)
-└── README.md
+
+
+<img width="516" height="319" alt="image" src="https://github.com/user-attachments/assets/134d8cb4-ed5c-48d9-8923-5b034dfff21d" />
 
 
 -main.py: archivo principal con la lógica de la aplicación Flask.
