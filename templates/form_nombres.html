@@ -14,7 +14,12 @@
         <label for="nombre3">Nombre 3:</label>
         <input type="text" id="nombre3" name="nombre3" required value="{{ nombre3 if nombre3 is defined else '' }}">
 
-        <button type="submit" class="boton_form">Enviar</button>
+        {% if not resultado %}
+            <button type="submit" class="boton_form">Enviar</button>
+        {% else %}
+            <a href="/nombres" class="boton_form_secundario">Reiniciar</a>
+            <a href="/" class="boton_form_secundario">Ir al Home</a>
+        {% endif %}
     </form>
     {% if resultado %}
     <div class="resultado">
@@ -27,8 +32,7 @@
         </h2>
         <h2>Cantidad de caracteres: {{ cantidad }}</h2>
     </div>
-{% endif %}
+    {% endif %}
 </div>
 {% endblock %}
-
 
